@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meine Gleitzeit – Kostenloser Gleitzeitrechner für Android</title>
+  <meta name="description" content="Kostenloser Gleitzeitrechner für Android – Arbeitszeit, Saldo, Auto-Pause und Verlauf. 14 Sprachen, offline, sicher, werbefrei.">
+  <meta name="keywords" content="Gleitzeit, Gleitzeitrechner, Arbeitszeitrechner, Android App, Flexzeit, kostenlos, offline">
+  <link rel="canonical" href="https://leverbursche.github.io/meine-gleitzeit/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leverbursche.github.io/meine-gleitzeit/">
+  <meta property="og:title" content="meine Gleitzeit – Kostenloser Gleitzeitrechner für Android">
+  <meta property="og:description" content="Kostenloser Gleitzeitrechner für Android – Arbeitszeit, Saldo, Auto-Pause und Verlauf. 14 Sprachen, offline, sicher, werbefrei.">
+  <meta property="og:image" content="https://leverbursche.github.io/meine-gleitzeit/images/feature_grafik_gleitzeit.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="meine Gleitzeit – Kostenloser Gleitzeitrechner für Android">
+  <meta name="twitter:description" content="Kostenloser Gleitzeitrechner für Android – Arbeitszeit, Saldo, Auto-Pause und Verlauf. 14 Sprachen, offline, sicher, werbefrei.">
+  <meta name="twitter:image" content="https://leverbursche.github.io/meine-gleitzeit/images/feature_grafik_gleitzeit.png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #2d6a4f;
+      --accent-dark: #1b4332;
+      --bg: #f8f9fb;
+      --card: #ffffff;
+      --text: #1a1a2e;
+      --muted: #5a6376;
+      --border: #e2e6f0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Language toggle ── */
+    #lang-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1.25rem;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+      max-width: 220px;
+    }
+    #lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background .15s, color .15s;
+    }
+    #lang-toggle button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* ── Hero ── */
+    header {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+    }
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+      object-fit: cover;
+    }
+    header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+    header p  { font-size: 1.1rem; opacity: .88; max-width: 560px; margin: 0 auto 2rem; }
+
+    .badge-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .play-badge { display: inline-block; border-radius: 8px; transition: transform .15s, box-shadow .15s; }
+    .play-badge:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+    .play-badge img { height: 60px; display: block; }
+
+    /* ── Main ── */
+    main { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+    /* ── Features ── */
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.25rem 1rem;
+    }
+    .feature-icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; }
+    .feature-card p  { font-size: 0.9rem; color: var(--muted); }
+
+    /* ── Screenshots ── */
+    .screenshots-section { margin-bottom: 3.5rem; }
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .feature-graphic-item { grid-column: span 4; }
+    .feature-graphic-item img { width: 100%; height: auto; border-radius: 16px; }
+    .screenshot-item { text-align: center; }
+    .screenshot-item img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.12);
+      cursor: pointer;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .screenshot-item img:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    }
+    .screenshot-item p {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ── Lightbox ── */
+    #lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.85);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-height: 90vh;
+      max-width: 90vw;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.5);
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 1rem; right: 1.25rem;
+      background: rgba(255,255,255,.15);
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      width: 2.5rem; height: 2.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ── Info row ── */
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3.5rem;
+    }
+    .info-chip {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .info-chip strong { color: var(--text); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.7rem; }
+      .features { grid-template-columns: 1fr; }
+      .screenshots-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Language toggle -->
+<div id="lang-toggle">
+  <button id="btn-de" class="active" onclick="setLang('de')">🇩🇪</button>
+  <button id="btn-en" onclick="setLang('en')">🇬🇧</button>
+  <button id="btn-fr" onclick="setLang('fr')">🇫🇷</button>
+  <button id="btn-it" onclick="setLang('it')">🇮🇹</button>
+  <button id="btn-nl" onclick="setLang('nl')">🇳🇱</button>
+  <button id="btn-pl" onclick="setLang('pl')">🇵🇱</button>
+  <button id="btn-tr" onclick="setLang('tr')">🇹🇷</button>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeLightbox()">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- Hero -->
+<header>
+  <img class="app-icon"
+       src="images/ic_launcher-playstore.png"
+       alt="Meine Gleitzeit App Icon">
+  <h1 class="i18n"
+      data-de="meine Gleitzeit · my flextime"
+      data-en="meine Gleitzeit · my flextime"
+      data-fr="meine Gleitzeit · mon temps flexible"
+      data-it="meine Gleitzeit · il mio orario flessibile"
+      data-nl="meine Gleitzeit · mijn glijdende werktijd"
+      data-pl="meine Gleitzeit · mój elastyczny czas pracy"
+      data-tr="meine Gleitzeit · esnek çalışma saatlerim">meine Gleitzeit · my flextime</h1>
+  <p class="i18n"
+     data-de="Dein Arbeitszeitrechner für Gleitzeit – schnell, übersichtlich, offline, sicher, absolut werbefrei und kostenlos."
+     data-en="Your flextime calculator – fast, clear, offline, secure, completely ad-free and free of charge."
+     data-fr="Votre calculatrice de temps de travail flexible – rapide, claire, hors ligne, sécurisée, sans pub et gratuite."
+     data-it="Il tuo calcolatore per l'orario flessibile – veloce, chiaro, offline, sicuro, senza pubblicità e gratuito."
+     data-nl="Jouw werktijdcalculator voor glijdende werktijden – snel, overzichtelijk, offline, veilig, volledig reclamevrij en gratis."
+     data-pl="Twój kalkulator czasu pracy – szybki, przejrzysty, offline, bezpieczny, całkowicie bez reklam i bezpłatny."
+     data-tr="Esnek çalışma saatleriniz için zaman hesaplayıcı – hızlı, net, çevrimdışı, güvenli, tamamen reklamsız ve ücretsiz."></p>
+  <div class="badge-row">
+    <a class="play-badge"
+       href="https://play.google.com/store/apps/details?id=de.leverbursche.meinegleitzeitapp"
+       target="_blank" rel="noopener">
+      <img id="play-badge-img"
+           src="https://play.google.com/intl/de_us/badges/static/images/badges/de_badge_web_generic.png"
+           alt="Jetzt bei Google Play"
+           height="60">
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Features -->
+  <h2 class="section-title i18n"
+      data-de="Funktionen"
+      data-en="Features"
+      data-fr="Fonctionnalités"
+      data-it="Funzionalità"
+      data-nl="Functies"
+      data-pl="Funkcje"
+      data-tr="Özellikler"></h2>
+
+  <div class="features">
+
+    <div class="feature-card">
+      <div class="feature-icon">🕐</div>
+      <h3 class="i18n"
+          data-de="Gleitzeitberechnung"
+          data-en="Flextime calculation"
+          data-fr="Calcul des horaires flexibles"
+          data-it="Calcolo orario flessibile"
+          data-nl="Glijdende werktijdberekening"
+          data-pl="Obliczanie czasu pracy"
+          data-tr="Esnek saat hesaplama"></h3>
+      <p class="i18n"
+         data-de="Dienstbeginn, Dienstende und Pause eingeben – die App berechnet Arbeitszeit und Saldo (Mehr-/Minderstunden)."
+         data-en="Enter start, end and break time – the app calculates your working time and balance (overtime/undertime)."
+         data-fr="Saisissez le début, la fin et la pause – l'application calcule le temps de travail et le solde (heures sup./déficit)."
+         data-it="Inserisci inizio, fine e pausa – l'app calcola il tempo lavorato e il saldo (ore extra/mancanti)."
+         data-nl="Voer begin, einde en pauze in – de app berekent de werktijd en het saldo (over-/undertijd)."
+         data-pl="Wprowadź początek, koniec i przerwę – aplikacja oblicza czas pracy i saldo (nadgodziny/niedobór)."
+         data-tr="Başlangıç, bitiş ve mola girin – uygulama çalışma sürenizi ve bakiyenizi hesaplar."></p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📋</div>
+      <h3 class="i18n"
+          data-de="Mehrere Zeiträume"
+          data-en="Multiple time periods"
+          data-fr="Plusieurs périodes"
+          data-it="Più periodi"
+          data-nl="Meerdere periodes"
+          data-pl="Wiele okresów"
+          data-tr="Birden fazla dönem"></h3>
+      <p class="i18n"
+         data-de="Unterbrechungen innerhalb eines Arbeitstages auf mehrere Zeiträume aufteilen – die App rechnet alles zusammen."
+         data-en="Split a workday with interruptions into multiple periods – the app sums them all up."
+         data-fr="Divisez une journée de travail avec interruptions en plusieurs périodes – l'application additionne tout."
+         data-it="Suddividi una giornata lavorativa con interruzioni in più periodi – l'app somma tutto."
+         data-nl="Verdeel een werkdag met onderbrekingen in meerdere periodes – de app telt alles bij elkaar op."
+         data-pl="Podziel dzień pracy z przerwami na wiele okresów – aplikacja zsumuje wszystko."
+         data-tr="Kesintili bir iş gününü birden fazla döneme böl – uygulama hepsini toplar."></p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">💼</div>
+      <h3 class="i18n"
+          data-de="Zwei Jobs"
+          data-en="Two jobs"
+          data-fr="Deux postes"
+          data-it="Due lavori"
+          data-nl="Twee banen"
+          data-pl="Dwie prace"
+          data-tr="İki işyeri"></h3>
+      <p class="i18n"
+         data-de="Zwei unabhängige Arbeitszeitkonten – ideal für Nebenjobs oder wechselnde Einsatzorte."
+         data-en="Two independent time accounts – ideal for side jobs or alternating workplaces."
+         data-fr="Deux comptes de temps indépendants – idéal pour les emplois secondaires ou les lieux de travail alternants."
+         data-it="Due conti orari indipendenti – ideale per lavori secondari o luoghi di lavoro alternati."
+         data-nl="Twee onafhankelijke tijdrekeningen – ideaal voor bijbanen of wisselende werklocaties."
+         data-pl="Dwa niezależne konta czasu – idealne dla dodatkowych prac lub zmiennych miejsc pracy."
+         data-tr="İki bağımsız zaman hesabı – ek işler veya değişen çalışma yerleri için ideal."></p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">📅</div>
+      <h3 class="i18n"
+          data-de="Verlauf"
+          data-en="History"
+          data-fr="Historique"
+          data-it="Cronologia"
+          data-nl="Geschiedenis"
+          data-pl="Historia"
+          data-tr="Geçmiş"></h3>
+      <p class="i18n"
+         data-de="Tagesergebnisse speichern, durchsuchen und als Textdatei exportieren."
+         data-en="Save daily results, browse them and export as a text file."
+         data-fr="Enregistrez les résultats quotidiens, consultez-les et exportez-les en fichier texte."
+         data-it="Salva i risultati giornalieri, sfogliali ed esportali come file di testo."
+         data-nl="Sla dagelijkse resultaten op, bekijk ze en exporteer ze als tekstbestand."
+         data-pl="Zapisuj wyniki dzienne, przeglądaj je i eksportuj jako plik tekstowy."
+         data-tr="Günlük sonuçları kaydet, incele ve metin dosyası olarak dışa aktar."></p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">☕</div>
+      <h3 class="i18n"
+          data-de="Automatische Pause"
+          data-en="Automatic break"
+          data-fr="Pause automatique"
+          data-it="Pausa automatica"
+          data-nl="Automatische pauze"
+          data-pl="Automatyczna przerwa"
+          data-tr="Otomatik mola"></h3>
+      <p class="i18n"
+         data-de="Konfigurierbarer Pausenabzug je nach Anwesenheitsdauer – bis zu 4 Stufen, getrennt pro Job."
+         data-en="Configurable break deduction based on attendance duration – up to 4 tiers, separately per job."
+         data-fr="Déduction de pause configurable selon la durée de présence – jusqu'à 4 niveaux, séparément par poste."
+         data-it="Deduzione pausa configurabile in base alla durata della presenza – fino a 4 livelli, separatamente per lavoro."
+         data-nl="Configureerbare pauze-aftrek op basis van aanwezigheidsduur – tot 4 niveaus, apart per baan."
+         data-pl="Konfigurowalne odliczanie przerwy zależnie od czasu obecności – do 4 progów, osobno na pracę."
+         data-tr="Çalışma süresine göre yapılandırılabilir mola kesintisi – 4 kademeye kadar, her işyeri için ayrı."></p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🔔</div>
+      <h3 class="i18n"
+          data-de="Erinnerung"
+          data-en="Reminder"
+          data-fr="Rappel"
+          data-it="Promemoria"
+          data-nl="Herinnering"
+          data-pl="Przypomnienie"
+          data-tr="Hatırlatıcı"></h3>
+      <p class="i18n"
+         data-de="Alarm auf das berechnete Dienstende setzen – die App benachrichtigt dich, wenn es Zeit ist zu gehen."
+         data-en="Set an alarm for the calculated end of shift – the app notifies you when it's time to go."
+         data-fr="Définissez une alarme pour la fin de service calculée – l'application vous avertit quand il est l'heure de partir."
+         data-it="Imposta un allarme per la fine turno calcolata – l'app ti avvisa quando è ora di andare."
+         data-nl="Stel een alarm in voor het berekende einde van de dienst – de app meldt het je als het tijd is om te gaan."
+         data-pl="Ustaw alarm na obliczony koniec służby – aplikacja powiadomi cię, gdy czas wychodzić."
+         data-tr="Hesaplanan mesai sonu için alarm kur – uygulama gitme zamanı geldiğinde seni bildirir."></p>
+    </div>
+
+  </div>
+
+  <!-- Screenshots -->
+  <div class="screenshots-section">
+    <h2 class="section-title i18n"
+        data-de="Screenshots"
+        data-en="Screenshots"
+        data-fr="Captures d'écran"
+        data-it="Screenshot"
+        data-nl="Screenshots"
+        data-pl="Zrzuty ekranu"
+        data-tr="Ekran görüntüleri"></h2>
+    <div class="screenshots-grid">
+
+      <div class="screenshot-item">
+        <img src="images/Screenshot_20260423_095351.png" alt="" onclick="openLightbox(this)">
+        <p class="i18n"
+           data-de="Mehrere Zeiträume"
+           data-en="Multiple time periods"
+           data-fr="Plusieurs périodes"
+           data-it="Più periodi"
+           data-nl="Meerdere periodes"
+           data-pl="Wiele okresów"
+           data-tr="Birden fazla dönem"></p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="images/Screenshot_20260507_103429.png" alt="" onclick="openLightbox(this)">
+        <p class="i18n"
+           data-de="Erinnerungsfunktion"
+           data-en="Reminder"
+           data-fr="Rappel"
+           data-it="Promemoria"
+           data-nl="Herinnering"
+           data-pl="Przypomnienie"
+           data-tr="Hatırlatıcı"></p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="images/Screenshot_20260423_095342.png" alt="" onclick="openLightbox(this)">
+        <p class="i18n"
+           data-de="Verlauf"
+           data-en="History"
+           data-fr="Historique"
+           data-it="Cronologia"
+           data-nl="Geschiedenis"
+           data-pl="Historia"
+           data-tr="Geçmiş"></p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="images/Screenshot_20260423_092445.png" alt="" onclick="openLightbox(this)">
+        <p class="i18n"
+           data-de="Automatische Pause"
+           data-en="Automatic break"
+           data-fr="Pause automatique"
+           data-it="Pausa automatica"
+           data-nl="Automatische pauze"
+           data-pl="Automatyczna przerwa"
+           data-tr="Otomatik mola"></p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="images/Screenshot_20260423_092250.png" alt="" onclick="openLightbox(this)">
+        <p class="i18n"
+           data-de="14 Sprachen"
+           data-en="14 languages"
+           data-fr="14 langues"
+           data-it="14 lingue"
+           data-nl="14 talen"
+           data-pl="14 języków"
+           data-tr="14 dil"></p>
+      </div>
+
+      <div class="screenshot-item">
+        <img src="images/Screenshot_20260423_093547.png" alt="" onclick="openLightbox(this)">
+        <p class="i18n"
+           data-de="Zwei Jobs"
+           data-en="Two jobs"
+           data-fr="Deux postes"
+           data-it="Due lavori"
+           data-nl="Twee banen"
+           data-pl="Dwie prace"
+           data-tr="İki işyeri"></p>
+      </div>
+
+      <div class="screenshot-item feature-graphic-item">
+        <img src="images/feature_grafik_gleitzeit.png" alt="Meine Gleitzeit – Feature Graphic" onclick="openLightbox(this)">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Info chips -->
+  <div class="info-row">
+    <span class="info-chip">🌍 <strong class="i18n"
+        data-de="14 Sprachen" data-en="14 languages" data-fr="14 langues"
+        data-it="14 lingue" data-nl="14 talen" data-pl="14 języków" data-tr="14 dil"></strong></span>
+    <span class="info-chip">📴 <strong class="i18n"
+        data-de="100 % offline" data-en="100% offline" data-fr="100 % hors ligne"
+        data-it="100% offline" data-nl="100% offline" data-pl="100% offline" data-tr="100% çevrimdışı"></strong></span>
+    <span class="info-chip">🆓 <strong class="i18n"
+        data-de="Kostenlos" data-en="Free" data-fr="Gratuit"
+        data-it="Gratuito" data-nl="Gratis" data-pl="Bezpłatna" data-tr="Ücretsiz"></strong></span>
+    <span class="info-chip">🔒 <strong class="i18n"
+        data-de="Keine Werbung, keine Tracker" data-en="No ads, no trackers" data-fr="Sans pub, sans trackers"
+        data-it="Nessuna pubblicità, nessun tracker" data-nl="Geen advertenties, geen trackers"
+        data-pl="Bez reklam, bez trackerów" data-tr="Reklam yok, takipçi yok"></strong></span>
+    <span class="info-chip">🤖 Android <strong>7.0+</strong></span>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="https://leverbursche.github.io/meine-gleitzeit-datenschutz/"
+       target="_blank" rel="noopener"
+       class="i18n"
+       data-de="Datenschutzerklärung"
+       data-en="Privacy Policy"
+       data-fr="Politique de confidentialité"
+       data-it="Informativa sulla privacy"
+       data-nl="Privacybeleid"
+       data-pl="Polityka prywatności"
+       data-tr="Gizlilik Politikası"></a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/leverbursche/meine-gleitzeit"
+       target="_blank" rel="noopener">GitHub</a>
+  </p>
+</footer>
+
+<script>
+  const langs = ['de','en','fr','it','nl','pl','tr'];
+
+  const badgeAlt = {
+    de: 'Jetzt bei Google Play', en: 'Get it on Google Play',
+    fr: 'Disponible sur Google Play', it: 'Disponibile su Google Play',
+    nl: 'Verkrijgbaar op Google Play', pl: 'Pobierz z Google Play',
+    tr: "Google Play'den İndir"
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.i18n').forEach(el => {
+      const val = el.dataset[lang];
+      if (val !== undefined) el.textContent = val;
+    });
+    langs.forEach(l =>
+      document.getElementById('btn-' + l).classList.toggle('active', l === lang)
+    );
+    const badge = document.getElementById('play-badge-img');
+    if (badge) {
+      badge.src = `https://play.google.com/intl/${lang}_us/badges/static/images/badges/${lang}_badge_web_generic.png`;
+      badge.alt = badgeAlt[lang] || badgeAlt.en;
+    }
+  }
+
+  function openLightbox(img) {
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  setLang('de');
+</script>
+
+</body>
+</html>
