@@ -1,0 +1,239 @@
+================================================================================
+GOOGLE PLAY STORE – BESCHREIBUNGEN
+App: meine Gleitzeit
+Package: de.leverbursche.meinegleitzeitapp
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+DEUTSCH (de)
+────────────────────────────────────────────────────────────────────────────────
+
+Kurzbeschreibung (max. 80 Zeichen):
+Einfacher Gleitzeitrechner für deinen Arbeitstag
+
+Vollständige Beschreibung:
+„meine Gleitzeit" ist ein schlanker, werbefreier Arbeitszeitrechner speziell für Beschäftigte mit Gleitzeit.
+
+Gib einfach Dienstbeginn, Dienstende, Pause und deine Sollarbeitszeit ein – die App berechnet sofort, wie viel du bereits gearbeitet hast und ob du im Plus oder Minus liegst.
+
+FUNKTIONEN:
+• Berechnung von Arbeitszeit und Gleitzeitguthaben / -defizit
+• Bis zu 8 Zeiträume pro Tag (z. B. bei Unterbrechungen oder Außenterminen)
+• Unterstützung für zwei Jobs – jeder mit bis zu 8 Zeiträumen, eigener Sollarbeitszeit und frei wählbarem Namen
+• Frühestes Dienstende automatisch berechnen
+• Dienstbeginn vorbelegen: aktuelle Uhrzeit oder letzter gespeicherter Wert
+• Alle Eingaben werden automatisch gespeichert und beim nächsten Start wiederhergestellt
+• Unterstützt Systemschriftgröße und Zoom – vollständig scrollbares Layout
+• Kein Internet erforderlich – läuft vollständig offline
+• Keine Werbung, keine In-App-Käufe, kein Account erforderlich
+• Open Source (MIT-Lizenz)
+
+SPRACHEN: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+Ideal für alle, die schnell und unkompliziert prüfen wollen, wann sie Feierabend machen können oder wie ihr aktueller Gleitzeitstand ist.
+
+
+────────────────────────────────────────────────────────────────────────────────
+ENGLISH (en)
+────────────────────────────────────────────────────────────────────────────────
+
+Short description (max. 80 characters):
+Simple flextime calculator for your working day
+
+Full description:
+"meine Gleitzeit" is a lightweight, ad-free working time calculator designed for employees with flexible working hours.
+
+Just enter your start time, end time, break duration and target working hours – the app instantly calculates how much you have already worked and whether you are ahead or behind schedule.
+
+FEATURES:
+• Calculation of working time and flextime balance (plus/minus)
+• Up to 8 time periods per day (e.g. for interruptions or off-site appointments)
+• Support for two jobs – each with up to 8 time periods, its own target hours and a freely customisable name
+• Automatic calculation of the earliest possible end of duty
+• Pre-fill start time: current time or last saved value
+• All entries are saved automatically and restored on next launch
+• Supports system font size and zoom – fully scrollable layout
+• No internet connection required – runs completely offline
+• No ads, no in-app purchases, no account required
+• Open source (MIT licence)
+
+LANGUAGES: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+Perfect for anyone who wants to quickly and easily check when they can finish work or what their current flextime balance is.
+
+
+────────────────────────────────────────────────────────────────────────────────
+FRANÇAIS (fr)
+────────────────────────────────────────────────────────────────────────────────
+
+Description courte (max. 80 caractères) :
+Calculateur d'horaires flexibles simple pour votre journée
+
+Description complète :
+« meine Gleitzeit » est une application légère et sans publicité pour calculer votre temps de travail, conçue pour les employés aux horaires variables.
+
+Saisissez simplement l'heure de début, l'heure de fin, la durée de la pause et votre temps de travail cible – l'application calcule instantanément le temps déjà travaillé et indique si vous êtes en avance ou en retard.
+
+FONCTIONNALITÉS :
+• Calcul du temps de travail et du solde d'horaires flexibles (positif/négatif)
+• Jusqu'à 8 périodes par jour (p. ex. en cas d'interruptions ou de rendez-vous extérieurs)
+• Prise en charge de deux postes – chacun avec jusqu'à 8 périodes, ses propres heures cibles et un nom personnalisable
+• Calcul automatique de la fin de service la plus précoce possible
+• Pré-remplissage de l'heure de début : heure actuelle ou dernière valeur enregistrée
+• Toutes les saisies sont sauvegardées automatiquement et restaurées au prochain démarrage
+• Compatible avec la taille de police système et le zoom – disposition entièrement défilante
+• Aucune connexion Internet requise – fonctionne entièrement hors ligne
+• Aucune publicité, aucun achat intégré, aucun compte requis
+• Open source (licence MIT)
+
+LANGUES : Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+Idéal pour tous ceux qui souhaitent vérifier rapidement et simplement à quelle heure ils peuvent partir ou quel est leur solde d'horaires flexibles actuel.
+
+
+────────────────────────────────────────────────────────────────────────────────
+ITALIANO (it)
+────────────────────────────────────────────────────────────────────────────────
+
+Descrizione breve (max. 80 caratteri):
+Semplice calcolatore di orario flessibile per la tua giornata
+
+Descrizione completa:
+«meine Gleitzeit» è un'applicazione leggera e senza pubblicità per il calcolo dell'orario di lavoro, pensata per i dipendenti con orario flessibile.
+
+Inserisci semplicemente l'orario di inizio, l'orario di fine, la durata della pausa e il tuo orario target – l'app calcola istantaneamente quanto hai già lavorato e se sei in anticipo o in ritardo.
+
+FUNZIONALITÀ:
+• Calcolo dell'orario di lavoro e del saldo flessibile (positivo/negativo)
+• Fino a 8 periodi al giorno (ad es. in caso di interruzioni o appuntamenti esterni)
+• Supporto per due lavori – ognuno con fino a 8 periodi, il proprio orario target e un nome personalizzabile
+• Calcolo automatico dell'orario di fine servizio più anticipato possibile
+• Pre-compilazione dell'orario di inizio: ora attuale o ultimo valore salvato
+• Tutti i dati vengono salvati automaticamente e ripristinati al prossimo avvio
+• Compatibile con la dimensione del carattere di sistema e lo zoom – layout completamente scorrevole
+• Nessuna connessione Internet richiesta – funziona completamente offline
+• Nessuna pubblicità, nessun acquisto in-app, nessun account richiesto
+• Open source (licenza MIT)
+
+LINGUE: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+Ideale per chi vuole verificare rapidamente e comodamente a che ora può smettere di lavorare o qual è il proprio saldo flessibile attuale.
+
+
+────────────────────────────────────────────────────────────────────────────────
+POLSKI (pl)
+────────────────────────────────────────────────────────────────────────────────
+
+Krótki opis (maks. 80 znaków):
+Prosty kalkulator czasu pracy dla Twojego dnia roboczego
+
+Pełny opis:
+„meine Gleitzeit" to lekka, wolna od reklam aplikacja do obliczania czasu pracy, stworzona dla pracowników z elastycznym czasem pracy.
+
+Wystarczy wpisać godzinę rozpoczęcia, godzinę zakończenia, czas przerwy i planowany czas pracy – aplikacja natychmiast obliczy, ile już przepracowałeś(-aś) i czy jesteś na plusie, czy na minusie.
+
+FUNKCJE:
+• Obliczanie czasu pracy i salda godzin elastycznych (plus/minus)
+• Do 8 okresów dziennie (np. przy przerwach lub wyjazdach służbowych)
+• Obsługa dwóch prac – każda z maksymalnie 8 okresami, własnym celem godzinowym i dowolnie wybraną nazwą
+• Automatyczne obliczanie najwcześniejszego możliwego zakończenia służby
+• Wstępne wypełnianie godziny rozpoczęcia: bieżący czas lub ostatnio zapisana wartość
+• Wszystkie wpisy są zapisywane automatycznie i przywracane przy następnym uruchomieniu
+• Obsługuje systemowy rozmiar czcionki i zoom – w pełni przewijany układ
+• Nie wymaga połączenia z Internetem – działa całkowicie offline
+• Brak reklam, brak zakupów w aplikacji, brak wymaganego konta
+• Open source (licencja MIT)
+
+JĘZYKI: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+Idealna dla wszystkich, którzy chcą szybko i łatwo sprawdzić, kiedy mogą skończyć pracę lub jaki jest ich aktualny stan godzin elastycznych.
+
+
+────────────────────────────────────────────────────────────────────────────────
+TÜRKÇE (tr)
+────────────────────────────────────────────────────────────────────────────────
+
+Kısa açıklama (maks. 80 karakter):
+İş gününüz için basit esnek çalışma süresi hesaplayıcısı
+
+Tam açıklama:
+«meine Gleitzeit», esnek çalışma saatlerine sahip çalışanlar için tasarlanmış, hafif ve reklamsız bir çalışma süresi hesaplama uygulamasıdır.
+
+Sadece işe başlama saatinizi, bitiş saatinizi, mola sürenizi ve hedef çalışma sürenizi girin – uygulama, ne kadar çalıştığınızı ve artıda mı yoksa ekside mi olduğunuzu anında hesaplar.
+
+ÖZELLİKLER:
+• Çalışma süresi ve esnek saat bakiyesinin hesaplanması (artı/eksi)
+• Günde 8 adede kadar zaman dilimi (ör. kesintiler veya dış randevular için)
+• İki işyeri desteği – her biri en fazla 8 zaman dilimiyle, kendi hedef saatleriyle ve serbestçe seçilebilir adla
+• En erken mümkün göreve bitiş saatinin otomatik hesaplanması
+• Başlangıç saatini önceden doldurma: geçerli saat veya son kaydedilen değer
+• Tüm girişler otomatik olarak kaydedilir ve bir sonraki başlatmada geri yüklenir
+• Sistem yazı tipi boyutunu ve yakınlaştırmayı destekler – tamamen kaydırılabilir düzen
+• İnternet bağlantısı gerekmez – tamamen çevrimdışı çalışır
+• Reklam yok, uygulama içi satın alma yok, hesap gerekmez
+• Açık kaynak (MIT lisansı)
+
+DİLLER: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+İşi ne zaman bitirebileceğini veya mevcut esnek saat bakiyesini hızlı ve kolay bir şekilde kontrol etmek isteyen herkes için idealdir.
+
+
+────────────────────────────────────────────────────────────────────────────────
+УКРАЇНСЬКА (uk)
+────────────────────────────────────────────────────────────────────────────────
+
+Короткий опис (макс. 80 символів):
+Простий калькулятор гнучкого робочого часу для вашого дня
+
+Повний опис:
+«meine Gleitzeit» — це легкий, без реклами застосунок для розрахунку робочого часу, створений для працівників з гнучким графіком роботи.
+
+Просто введіть час початку, час закінчення, тривалість перерви та цільовий робочий час — застосунок миттєво підрахує, скільки ви вже відпрацювали та чи маєте ви плюс або мінус.
+
+ФУНКЦІЇ:
+• Розрахунок робочого часу та балансу гнучкого графіку (плюс/мінус)
+• До 8 часових відрізків на день (наприклад, при перервах або виїзних зустрічах)
+• Підтримка двох місць роботи – кожне з до 8 часовими відрізками, власною нормою годин і вільно обраною назвою
+• Автоматичний розрахунок найраннішого можливого кінця роботи
+• Попереднє заповнення часу початку: поточний час або останнє збережене значення
+• Усі записи зберігаються автоматично та відновлюються при наступному запуску
+• Підтримує системний розмір шрифту та масштабування — повністю прокручуваний макет
+• Підключення до Інтернету не потрібне — працює повністю офлайн
+• Без реклами, без покупок у застосунку, без необхідності облікового запису
+• Відкритий код (ліцензія MIT)
+
+МОВИ: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+Ідеально підходить для всіх, хто хоче швидко і зручно перевірити, коли можна закінчити роботу або який поточний баланс гнучкого графіку.
+
+
+────────────────────────────────────────────────────────────────────────────────
+العربية (ar) — RTL
+────────────────────────────────────────────────────────────────────────────────
+
+وصف قصير (حتى 80 حرفًا):
+حاسبة بسيطة لأوقات العمل المرنة ليومك
+
+الوصف الكامل:
+«meine Gleitzeit» تطبيق خفيف وخالٍ من الإعلانات لحساب ساعات العمل، مصمم للموظفين الذين يعملون بنظام الدوام المرن.
+
+ما عليك سوى إدخال وقت بدء العمل، ووقت الانتهاء، ومدة الاستراحة، وساعات العمل المستهدفة – يحسب التطبيق فورًا كم ساعةً عملتَ بالفعل، وما إذا كنت في رصيد موجب أم سالب.
+
+المميزات:
+• حساب ساعات العمل ورصيد الدوام المرن (زائد / ناقص)
+• ما يصل إلى 8 فترات زمنية في اليوم (مثلاً عند الانقطاعات أو الاجتماعات الخارجية)
+• دعم وظيفتين – لكل منهما ما يصل إلى 8 فترات زمنية وساعات مستهدفة خاصة واسم مخصص
+• حساب تلقائي لأبكر وقت ممكن لانتهاء الدوام
+• تعبئة مسبقة لوقت البدء: الوقت الحالي أو آخر قيمة محفوظة
+• يتم حفظ جميع المدخلات تلقائيًا واستعادتها عند التشغيل التالي
+• يدعم حجم الخط وتكبير النظام – تخطيط قابل للتمرير بالكامل
+• لا يتطلب اتصالاً بالإنترنت – يعمل بالكامل دون اتصال
+• بدون إعلانات، بدون مشتريات داخل التطبيق، بدون حساب مطلوب
+• مفتوح المصدر (رخصة MIT)
+
+اللغات: Deutsch, English, Français, Italiano, Polski, Türkçe, Українська, العربية
+
+مثالي لكل من يريد التحقق بسرعة وسهولة من موعد انتهاء يوم العمل أو معرفة رصيد ساعات الدوام المرن الحالي.
+
+================================================================================

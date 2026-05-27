@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group_einstellungen">
+        <item
+            android:id="@+id/arbeitsstelle"
+            android:icon="@drawable/ic_menu_work"
+            android:title="@string/arbeitsstelle_menue" />
+        <item
+            android:id="@+id/jobs_benennen"
+            android:icon="@drawable/ic_menu_label"
+            android:title="@string/jobs_benennen" />
+        <item
+            android:id="@+id/auto_pause"
+            android:icon="@drawable/ic_menu_coffee"
+            android:title="@string/auto_pause_menue"
+            android:checkable="true" />
+        <item
+            android:id="@+id/zeitformat"
+            android:icon="@drawable/ic_menu_stopwatch"
+            android:title="@string/zeitformat_waehlen">
+
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/zeitformat_natuerlich"
+                        android:title="@string/natuerliche_zeit" />
+                    <item
+                        android:id="@+id/zeitformat_industrie"
+                        android:title="@string/industriezeit" />
+                </group>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/sprache"
+            android:icon="@drawable/ic_menu_language"
+            android:title="@string/sprache_menue" />
+    </group>
+
+    <group android:id="@+id/group_aktionen">
+        <item
+            android:id="@+id/felderLoeschen"
+            android:icon="@drawable/ic_menu_clear"
+            android:title="@string/felderLoeschen" />
+        <item
+            android:id="@+id/alleZeitraeumeLoeschen"
+            android:icon="@drawable/ic_menu_delete_sweep"
+            android:title="@string/alle_zeitraeume_loeschen" />
+    </group>
+
+    <group android:id="@+id/group_verlauf">
+        <item
+            android:id="@+id/tag_speichern"
+            android:icon="@drawable/ic_menu_save"
+            android:title="@string/tag_speichern" />
+        <item
+            android:id="@+id/verlauf"
+            android:icon="@drawable/ic_menu_history"
+            android:title="@string/verlauf" />
+    </group>
+
+    <group android:id="@+id/group_info">
+        <item
+            android:id="@+id/hilfe"
+            android:icon="@drawable/ic_menu_help"
+            android:title="@string/hilfe_menue" />
+        <item
+            android:id="@+id/ueber"
+            android:icon="@drawable/ic_info"
+            android:title="@string/ueberMeineGleitzeit" />
+        <item
+            android:id="@+id/beenden"
+            android:icon="@drawable/ic_menu_exit"
+            android:title="@string/beenden" />
+    </group>
+
+</menu>
