@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:paddingStart="40dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="24dp"
+        tools:context=".BlockFragment">
+
+        <View
+            android:id="@+id/focusDummy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <!-- Dienstbeginn -->
+        <TextView
+            android:id="@+id/textViewDienstbeginn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dienstbeginn"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDienstbeginnStunde"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/stunde"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextDienstbeginnMinute" />
+
+            <TextView
+                android:id="@+id/textViewDienstbeginnDoppelpunkt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="@string/doppelpunkt"
+                android:textAlignment="center"
+                android:textColor="#FEFEFF"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDienstbeginnMinute"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/minute"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextDienstendeStunde" />
+
+            <RadioGroup
+                android:id="@+id/radio_gruppedb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_dbjetzt"
+                    style="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#4CAF50"
+                    android:text="@string/jetzt"
+                    android:textColor="#4CAF50" />
+
+                <RadioButton
+                    android:id="@+id/radio_dbletzter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#4CAF50"
+                    android:text="@string/letzter"
+                    android:textColor="#4CAF50" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Dienstende -->
+        <TextView
+            android:id="@+id/textViewDienstende"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dienstende"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDienstendeStunde"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/stunde"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextDienstendeMinute" />
+
+            <TextView
+                android:id="@+id/textViewDoppelpunkt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="@string/doppelpunkt"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDienstendeMinute"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/minute"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextPause" />
+
+            <RadioGroup
+                android:id="@+id/radio_gruppede"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radio_dejetzt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#4CAF50"
+                    android:text="@string/jetzt"
+                    android:textColor="#4CAF50" />
+
+                <RadioButton
+                    android:id="@+id/radio_defruehestens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#4CAF50"
+                    android:text="@string/fruehestens"
+                    android:textColor="#4CAF50" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Pause -->
+        <TextView
+            android:id="@+id/textViewPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <Space
+                android:layout_width="60dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="@string/doppelpunkt"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPause"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/minute"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextSollarbeitszeitStunde" />
+
+            <TextView
+                android:id="@+id/textViewAutoPauseHinweis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/auto_pause_hinweis"
+                android:textColor="#4CAF50"
+                android:textSize="17sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Sollarbeitszeit -->
+        <TextView
+            android:id="@+id/textViewSollarbeitszeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sollarbeitszeit"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSollarbeitszeitStunde"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/stunde"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextSollarbeitszeitMinute" />
+
+            <TextView
+                android:id="@+id/textViewDoppelpunkt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="@string/doppelpunkt"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextSollarbeitszeitMinute"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#505050"
+                android:ems="2"
+                android:hint="@string/minute"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:selectAllOnFocus="true"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@+id/editTextDienstbeginnStunde" />
+
+            <TextView
+                android:id="@+id/textViewSollIndustrie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="14dp"
+                android:textColor="#AAAAAA"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Erzielte Zeit -->
+        <TextView
+            android:id="@+id/textViewErzielteZeit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="72dp"
+            android:layout_marginBottom="16dp"
+            android:text=""
+            android:textColor="#4CAF50"
+            android:textSize="24sp" />
+
+        <!-- Berechnen-Button -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:minWidth="140dp"
+            android:minHeight="60dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:backgroundTint="@color/green"
+            android:text="@string/Berechnen"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

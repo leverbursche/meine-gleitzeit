@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <!-- Tab-Leiste mit + Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#000000"
+            app:tabGravity="start"
+            app:tabIndicatorColor="#4CAF50"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#4CAF50"
+            app:tabTextColor="#AAAAAA" />
+
+        <ImageButton
+            android:id="@+id/infoButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/zeitraum_info_titel"
+            android:src="@drawable/ic_info" />
+
+        <ImageButton
+            android:id="@+id/addBlockButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/neuer_block"
+            android:src="@drawable/ic_add_white" />
+
+    </LinearLayout>
+
+    <!-- Hauptinhalt + Sidebar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- Sidebar rechts -->
+        <LinearLayout
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="top|center_horizontal"
+            android:background="#000000"
+            android:paddingTop="36dp">
+
+            <ImageButton
+                android:id="@+id/sidebarTagSpeichern"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/tag_speichern"
+                android:src="@drawable/ic_menu_save" />
+
+            <ImageButton
+                android:id="@+id/sidebarVerlauf"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/verlauf"
+                android:src="@drawable/ic_menu_history" />
+
+            <ImageButton
+                android:id="@+id/sidebarZeitraeumeSchliessen"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/alle_zeitraeume_loeschen"
+                android:src="@drawable/ic_menu_delete_sweep" />
+
+            <ImageButton
+                android:id="@+id/sidebarJobWechseln"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/arbeitsstelle_menue"
+                android:src="@drawable/ic_menu_work" />
+
+            <ImageButton
+                android:id="@+id/sidebarAlarm"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/alarm_erinnerung"
+                android:src="@drawable/ic_menu_alarm" />
+
+            <ImageButton
+                android:id="@+id/sidebarHilfe"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/hilfe_menue"
+                android:src="@drawable/ic_menu_help" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
