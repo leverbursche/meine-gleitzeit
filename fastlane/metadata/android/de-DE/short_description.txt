@@ -1,0 +1,1 @@
+Einfache lokale App zur Berechnung von Arbeitszeit und Gleitzeit.
