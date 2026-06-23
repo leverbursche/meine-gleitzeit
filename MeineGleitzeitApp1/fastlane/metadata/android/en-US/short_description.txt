@@ -1,0 +1,1 @@
+A simple local app to track your working hours and flexitime.
