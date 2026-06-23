@@ -1,0 +1,37 @@
+myFlextime is the easy-to-use time calculator for everyone with a flexitime arrangement.
+
+Do you work flexitime and want to quickly find out how many hours you've worked today?
+
+Or when you can finish work at the earliest? MyFlextime calculates it for you – no ads/no costs
+
+simple, fast, and no fuss.
+
+Here's how it works:
+
+- Enter your start time or use the current time
+
+- Enter your end time or calculate the earliest possible end time
+
+- Enter your breaks and target working hours
+
+- See the results immediately: actual working hours and balance (plus/minus)
+
+Benefits:
+
+- Clear and concise display
+- Completely offline – no online account required
+
+- No advertising, no tracking, no hidden costs
+
+- All data stays on your device
+
+- Instant calculation of working hours and flexitime balance
+
+- Calculate the earliest possible end time at the touch of a button
+
+- Manage two jobs simultaneously
+- Automatic break deduction is possible and configurable
+
+- Save and export your history
+
+Perfect for public sector employees, office workers, and all jobs with flexitime arrangements.
