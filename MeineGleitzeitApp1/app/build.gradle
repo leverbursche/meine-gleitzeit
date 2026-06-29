@@ -36,6 +36,13 @@ android {    namespace 'de.leverbursche.meinegleitzeitapp'
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    
+    dependenciesInfo {
+        // Entfernt den 'Dependency metadata' Signing Block aus der APK
+        includeInApk = false
+        // Entfernt ihn auch aus App Bundles (AAB)
+        includeInBundle = false
+    }         
 }
 
 dependencies {
